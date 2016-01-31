@@ -56,7 +56,7 @@
         var height = centerX - imageX / 2;
         var width = centerY - imageY / 2;
         $('.zoom-image-wrapper').css({
-            transform: "translate3d(" + height + "px, " + width + "px , 0px) scale(" + centerX / imageX + ")"
+            transform: "translate3d(0px, " + width + "px , " + height + "px) scale(" + centerX / imageX + ")"
         });
     }
 
@@ -105,16 +105,16 @@
         if ($(this).hasClass('fontawesome-fullscreen')) {
             launchIntoFullscreen(document.documentElement);
         } else {
+
+            // Cancel fullscreen
             exitFullscreen();
             imagePosition();
         }
 
         $(this).toggleClass("fontawesome-fullscreen  fontawesome-resize-small ");
     });
-    // Cancel fullscreen
-    // Full Screen
+    // Zoom
     $('[data-image-zoom=zoomButton]').on('click', function () {
-        $(this).toggleClass("fontawesome-zoom-in  fontawesome-zoom-out");
         if ($(this).hasClass('fontawesome-zoom-in')) {
             $('.zoom-image-wrapper').css({
                 transform: "translate3d(0px, 0px, 0px) scale(1)"
@@ -122,6 +122,8 @@
         } else {
             imagePosition();
         }
+
+        $(this).toggleClass("fontawesome-zoom-in  fontawesome-zoom-out");
     });
 }(jQuery));
 
