@@ -125,5 +125,26 @@
 
         $(this).toggleClass("fontawesome-zoom-in  fontawesome-zoom-out");
     });
+
+
+    //var posX, posY, clicked = false;
+    //function mueve(e) {
+    //    clicked = true;
+    //    posX = e.pageX - 20;
+    //    posY = e.pageY - 20;
+    //    $('.zoom-image-wrapper').css({
+    //        transform: "translate3d(0px, " + posY + "px , " + posX + "px) scale(1)"
+    //    });
+    //}
+    //$(document).on('mousedown', mueve);
+    //$(document).on('mouseup', function (e) {
+    //    clicked = false;
+    //});
+    //$(document).mousemove(function (e) {
+    //    if (clicked) {
+    //        $('[data-image-zoom=image]').stop(true, true);
+    //        mueve(e);
+    //    }
+    //});
 }(jQuery));
 
